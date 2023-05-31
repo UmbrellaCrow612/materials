@@ -1,6 +1,6 @@
 ## Binary Trees
 
-A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child. It provides an efficient way to store and retrieve data in a hierarchical manner, making it widely used in various applications.
+A binary tree is a hierarchical data structure in which each node can have at most two children: a left child and a right child. It provides an efficient way to store and retrieve data in a hierarchical manner, making it widely used in various applications.
 
 ### Structure and Terminology
 
@@ -19,10 +19,10 @@ There are different types of binary trees based on their properties:
 
 Traversal refers to the process of visiting all nodes in a binary tree in a specific order. The most commonly used traversal techniques are:
 
-- **Inorder Traversal**: Visit the left subtree, then the current node, and finally the right subtree.
-- **Preorder Traversal**: Visit the current node, then the left subtree, and finally the right subtree.
-- **Postorder Traversal**: Visit the left subtree, then the right subtree, and finally the current node.
-- **Level Order Traversal**: Visit the nodes at each level from left to right, starting from the root.
+- **Inorder Traversal**: Visit the left subtree, then the current node, and finally the right subtree. In a binary search tree, this traversal visits the nodes in ascending order.
+- **Preorder Traversal**: Visit the current node, then the left subtree, and finally the right subtree. This traversal is useful for creating a copy of the tree.
+- **Postorder Traversal**: Visit the left subtree, then the right subtree, and finally the current node. This traversal is useful for deleting a tree.
+- **Level Order Traversal**: Visit the nodes at each level from left to right, starting from the root. This traversal is also known as breadth-first traversal.
 
 ### Binary Search Tree (BST)
 
@@ -30,11 +30,16 @@ A binary search tree is a binary tree with the following additional property: fo
 
 ### Common Use Cases
 
-Binary trees find applications in various domains, including:
+Binary
+
+trees find applications in various domains, including:
 
 - **Binary Search Trees**: Binary search trees are commonly used for efficient searching, insertion, and deletion operations in databases and search algorithms.
 - **Expression Trees**: Binary trees can represent mathematical expressions, making them useful for evaluating expressions and generating code.
 - **File Systems**: Binary trees can be used to represent the hierarchical structure of file systems, allowing efficient file searching and manipulation.
+- **Huffman Coding**: Binary trees are used in data compression algorithms like Huffman coding to create optimal prefix codes for encoding data.
+- **Decision Trees**: Binary trees are employed in decision tree algorithms for solving classification and regression problems.
+- **Game Trees**: Binary trees can model the game flow and decision-making process in game theory and artificial intelligence.
 
 ### Summary
 

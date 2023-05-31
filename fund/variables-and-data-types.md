@@ -1,7 +1,3 @@
-- [Variables and Data Types](#variables-and-data-types)
-  - [Variables](#variables)
-  - [Data Types](#data-types)
-
 # Variables and Data Types
 
 In programming, variables and data types play a crucial role in storing and manipulating information. Variables are containers that hold values, and data types define the type of data that can be stored in a variable. Understanding variables and data types is essential for writing effective and reliable code. Let's dive into a comprehensive explanation of variables and data types.

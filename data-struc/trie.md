@@ -6,7 +6,7 @@ A trie, also known as a prefix tree, is a tree-like data structure used primaril
 
 1. **Tree Structure**: A trie is a multiway tree, where each node represents a character or a partial string. The edges of the tree represent characters, linking nodes to form words.
 
-2. **Prefix Property**: Tries have a prefix property, meaning that each node in the trie represents a prefix of one or more words. The characters along the path from the root to a node form a string.
+2. **Prefix Property**: Tries have a prefix property, meaning that each node in the trie represents a prefix of one or more complete words. The characters along the path from the root to a node form a string.
 
 3. **Children Nodes**: Each node in a trie can have multiple child nodes, representing different characters that can follow the current node's prefix.
 
@@ -26,12 +26,12 @@ A trie, also known as a prefix tree, is a tree-like data structure used primaril
 
 1. **Efficient Prefix-based Searches**: Tries allow for efficient searches and retrievals based on prefixes, making them ideal for auto-complete systems, spell-checking, and prefix matching applications.
 
-2. **Space Efficiency**: Tries efficiently store keys that share common prefixes, as common prefixes are shared among multiple keys.
+2. **Space Efficiency**: Tries efficiently store keys that share common prefixes, as common prefixes are shared among multiple keys, reducing the storage space required.
 
-3. **Ordered Iteration**: Tries can be used to perform ordered iteration over keys, which can be useful in scenarios where you need to iterate over keys in lexicographical order.
+3. **Ordered Iteration**: Tries can be used to perform ordered iteration over keys, allowing for lexicographical ordering of the keys.
 
 4. **Applications**: Tries find applications in a variety of fields, including search engines, natural language processing, network routing, and contact management systems.
 
 ### Summary
 
-Tries are tree-like data structures that excel at efficient retrieval of keys associated with values, particularly for prefix-based searches. With their prefix property and efficient insertion, search, and prefix search operations, tries provide an excellent solution for problems related to strings and efficient key retrieval. Understanding and implementing tries are valuable skills for developing applications that involve searching, autocompletion, and word processing tasks.
+Tries are tree-like data structures that excel at efficient retrieval of keys associated with values, particularly for prefix-based searches. With their prefix property and efficient insertion, search, prefix search, and deletion operations, tries provide an excellent solution for problems related to strings and efficient key retrieval. Understanding and implementing tries are valuable skills for developing applications that involve searching, autocompletion, and word processing tasks.
