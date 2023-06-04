@@ -1,4 +1,4 @@
-## Queue Data Structure
+# Comprehensive Guide to Queue
 
 ### Definition and Characteristics
 

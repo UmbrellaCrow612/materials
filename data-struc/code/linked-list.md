@@ -1,4 +1,4 @@
-## Linked List Data Structure
+# Comprehensive Guide to Linked Lists
 
 ### Definition and Characteristics
 
