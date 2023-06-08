@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
   "fundamentals": "Fundamentals",
-  "data-struc": "Data Structures",
-  "algo": "Algorithms"
+  "data": "Data Structures",
+  "algo": "Algorithms",
+  "networking": "Networking"
 }

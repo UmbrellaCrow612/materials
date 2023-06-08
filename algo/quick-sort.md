@@ -1,39 +1,58 @@
-Quick Sort is a widely used sorting algorithm known for its efficiency and average-case time complexity of O(n log n). It follows the divide-and-conquer paradigm and employs a recursive approach to sort the elements of an unsorted list.
+# Quick Sort
 
-The main idea behind Quick Sort is to select a pivot element from the list and partition the other elements into two sublists, according to whether they are less than or greater than the pivot. This process is repeated recursively on the sublists until the entire list is sorted.
+## Introduction
 
-Here's a step-by-step explanation of the Quick Sort algorithm:
+Quick sort is a popular divide-and-conquer sorting algorithm known for its efficiency and practicality. It works by selecting a pivot element from the array and partitioning the other elements into two subarrays, according to whether they are less than or greater than the pivot. The subarrays are then recursively sorted, and the process continues until the array is completely sorted.
 
-1. **Pivot Selection**: Choose a pivot element from the list. The pivot can be selected in various ways, such as picking the first or last element, selecting a random element, or using a median-of-three approach.
+## Explanation
 
-2. **Partitioning**: Rearrange the elements of the list such that all elements less than the pivot come before it, and all elements greater than the pivot come after it. This step ensures that the pivot is in its final sorted position.
+The quick sort algorithm works as follows:
 
-3. **Recursive Calls**: Recursively apply the Quick Sort algorithm to the sublists created by the partitioning step. This is done separately for the elements before the pivot and the elements after the pivot.
+1. Choose a pivot element from the array. The pivot can be selected in different ways, such as picking the first, last, or middle element.
+2. Partition the array by rearranging its elements so that all elements less than the pivot come before it, and all elements greater than the pivot come after it. The pivot will then be in its final sorted position.
+3. Recursively apply quick sort to the subarray before the pivot (the elements less than the pivot) and the subarray after the pivot (the elements greater than the pivot).
+4. Repeat this process until the subarrays are sorted, and the entire array is sorted.
 
-4. **Combine**: As the recursive calls return, the sublists become sorted. Combine the sorted sublists to obtain the final sorted list.
+## Implementation
 
-The efficiency of Quick Sort lies in its partitioning step. By selecting a pivot element and properly rearranging the other elements around it, the algorithm effectively reduces the size of the subproblems in each recursive call. This results in a faster average-case time complexity of O(n log n) compared to other sorting algorithms.
+Here's an implementation of quick sort in Python:
 
-However, it is important to note that in the worst-case scenario, Quick Sort can have a time complexity of O(n^2) if the pivot selection is unbalanced and the list is already sorted or nearly sorted. To mitigate this, various optimizations and pivot selection strategies, such as the random or median-of-three pivot, can be employed.
+```python
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
 
-To learn and implement Quick Sort, you can follow these steps:
+    pivot = arr[0]
+    lesser = [x for x in arr[1:] if x <= pivot]
+    greater = [x for x in arr[1:] if x > pivot]
 
-1. Understand the divide-and-conquer approach and recursive algorithms.
+    return quick_sort(lesser) + [pivot] + quick_sort(greater)
+```
 
-2. Implement the partitioning step to rearrange the elements around the pivot.
+Step-by-step explanation of the code:
 
-3. Recursively apply the Quick Sort algorithm to the sublists created by the partitioning step.
+1. The `quick_sort` function recursively applies quick sort to the subarrays until the base case of an empty or single-element array is reached.
+2. The pivot is chosen as the first element of the array (`arr[0]`).
+3. Using list comprehensions, two new subarrays (`lesser` and `greater`) are created to partition the elements based on their relation to the pivot.
+4. The function then recursively applies quick sort to the `lesser` and `greater` subarrays.
+5. Finally, the sorted subarrays are concatenated with the pivot element between them and returned.
 
-4. Combine the sorted sublists to obtain the final sorted list.
+## Use Cases
 
-5. Test your implementation with various inputs and verify that it produces the expected sorted output.
+Quick sort is widely used in practice due to its efficiency and versatility. It performs well on average and best-case scenarios and is applicable to both small and large arrays. Quick sort is commonly used for in-memory sorting and is often the preferred choice when high performance is required.
 
-Learning materials for Quick Sort can include textbooks, online tutorials, and programming resources. Here are some resources that can help you understand Quick Sort in detail:
+## Time and Space Complexity
 
-- "Introduction to Algorithms" by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein: This book provides a comprehensive explanation of Quick Sort and other sorting algorithms, along with their analysis and implementation.
+The time complexity of quick sort varies depending on the pivot selection and the characteristics of the input array. On average, it has a time complexity of O(n log n), where n is the number of elements in the array. In the worst-case scenario (when the pivot is poorly chosen), the time complexity can degrade to O(n^2). However, this can be mitigated by selecting the pivot wisely using techniques like the random pivot selection or the "median of three" approach. The space complexity is O(log n) for the recursive call stack.
 
-- Online tutorials and video lectures: Websites like GeeksforGeeks, Khan Academy, and Coursera offer tutorials and video lectures on algorithms, including Quick Sort. These resources often include step-by-step explanations and interactive examples.
+## Variants or Extensions
 
-- Programming websites and communities: Websites like Stack Overflow and GitHub provide code examples and discussions related to Quick Sort implementation in various programming languages. You can explore these resources to gain insights and learn from the experiences of others.
+Some variants or extensions of quick sort include:
 
-By studying these materials and implementing Quick Sort in your preferred programming language, you will gain a solid understanding of the algorithm and enhance your problem-solving skills.
+- Randomized Quick Sort: Improves the performance of quick sort by randomly selecting the pivot element to minimize the chances of encountering worst-case scenarios.
+- Dual Pivot Quick Sort: Utilizes two pivots instead of one to partition the array into three segments, improving efficiency for arrays with many duplicate elements.
+- Hybrid Quick Sort: Combines quick sort with other sorting algorithms (like insertion sort) to optimize performance for small subarrays.
+
+## Summary
+
+Quick sort is a versatile and efficient sorting algorithm that uses the divide-and-conquer technique. It provides excellent performance on average and best-case scenarios and is widely used in practice. Understanding quick sort is essential for programmers aiming to master efficient sorting techniques.
