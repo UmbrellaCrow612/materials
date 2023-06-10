@@ -4,6 +4,11 @@
   "ip-addressing": "",
   "routing": "",
   "tcp-ip": "TCP/IP",
-  "ports-and-sockets": "Ports and Sockets"
-
+  "ports-and-sockets": "Ports and Sockets",
+  "dns": "",
+  "fire-nat": "Firewalls and NAT",
+  "vlans": "VLANs",
+  "dhcp": "DHCP",
+  "net-sec": "Network Security",
+  "osi-model": "OSI Model"
 }
